@@ -5,8 +5,8 @@ public class HelloWorld {
         System.out.print("Hello, World!");
         System.out.println("Hello, World!");
         System.out.print("Hello, World!");
-
-
+//        "sout" creates System.out.println();
+//        "souf" creates System.out.printf();
 
 //        Create an int variable named myFavoriteNumber and assign your favorite number to it, then print it out to the console.
 

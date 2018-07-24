@@ -1,8 +1,12 @@
 public class HelloWorld {
     public static void main(String[] args) {
-//        System.out.print("Hello, World! ");
-//        System.out.print("Hello, World!");
-//        System.out.println("Hello, World!");
+        System.out.print("Hello, World!\n");
+        System.out.println("Hello, World!");
+        System.out.print("Hello, World!");
+        System.out.println("Hello, World!");
+        System.out.print("Hello, World!");
+
+
 
 //        Create an int variable named myFavoriteNumber and assign your favorite number to it, then print it out to the console.
 
@@ -82,17 +86,17 @@ public class HelloWorld {
 
 //        y *= x;
 
-        int x = 10;
-        int y = 2;
+//        int x = 10;
+//        int y = 2;
 
 //        x = x / y;
 //        x /= y;
 
 //        y = y - x;
-        y -= x;
+//        y -= x;
 
 
 //        System.out.println(x);
-        System.out.println(y);
+//        System.out.println(y);
     }
 }

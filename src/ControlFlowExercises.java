@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
@@ -32,7 +34,8 @@ public class ControlFlowExercises {
         } while (i < 9223372036854775807);
 */
 
-/*  FizzBuzz
+//FizzBuzz
+/*
         for(int i = 1; i <= 100; i++) {
             if (i%15==0) {
                 System.out.println("FizzBuzz");
@@ -46,12 +49,43 @@ public class ControlFlowExercises {
         }
 */
 
+        Scanner sc = new Scanner(System.in);
+//        System.out.println("I can square and cube any number!\nWhat number would you like to use?");
+//        String userStr = sc.nextLine();
+//        float userInt = Float.parseFloat(userStr);
+//        for (int i = 1; i <= userInt; i++) {
+//            if (i<=userInt) {
+//                float powers = userInt * i;
+//                System.out.println(powers);
+//            }
+//        }
+
+        boolean userContinues = true;
+
+        do {
+            System.out.println("I can square and cube any number!\nWhat number would you like to use?");
+            int userInt = sc.nextInt();
+            System.out.println();
+            System.out.println("Here is your table");
+            System.out.println();
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
+            for (int i = 1; i <= userInt; i += 1) {
+                System.out.printf("%-7d", i);
+                System.out.print("|");
+                System.out.printf(" %-8d", i*i);
+                System.out.print("|");
+                System.out.printf(" %-9d", i*i*i);
+                System.out.println();
+            }
+            System.out.print("Would you like to enter another number (y/n)?");
+            String userResponse = sc.next();
+            if (!userResponse.equalsIgnoreCase("y")) {
+                userContinues = false;
+            }
+
+
+
+        } while (userContinues);
     }
 }
-
-
-//    Do While
-//
-//    Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
-//        Alter your loop to count backwards by 5's from 100 to -10.
-//        Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:

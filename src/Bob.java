@@ -2,24 +2,52 @@ import java.util.Scanner;
 
 public class Bob {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Bob the Robot Teenager is lazy. Ask him a question or two, yell at him if you wish, or simply give him the silent treatment:");
-        String str = sc.nextLine();
-        char lastLetter = str.charAt(str.length() - 1);
-        switch (lastLetter) {
-            case '?' :
-                System.out.println("Sure.");
-                break;
-            case '!' :
-                System.out.println("Whoa, chill out!");
-                break;
-            case ' ' :
-                System.out.println("Fine. Be that way!");
-                break;
-            default:
-                System.out.println("Whatever bro");
-                break;
+
+        boolean userContinues = true;
+do {
+
+        System.out.println("Bob the Robot Teenager is lazy. Ask him a question or two, yell at him if you wish, or simply give him the silent treatment:");
+        Scanner input = new Scanner(System.in);
+        String msg = input.nextLine().trim();
+        String uppercaseVer = msg.toUpperCase();
+
+        if(msg.endsWith("?")){
+            System.out.println("Sure.\n");
+        } else if (msg.endsWith("!") || (uppercaseVer.equals(msg) && !msg.isEmpty())) {
+            System.out.println("Whoa, chill out!\n");
+        } else if (msg.isEmpty()) {
+            System.out.println("Fine! Be that way!\n");
+        } else {
+            System.out.println("Whatever bro!\n");
         }
+
+    System.out.print("Would you like to keep talking to Bob (y/n)?\n");
+    String userResponse = input.next();
+    if (!userResponse.equalsIgnoreCase("y")) {
+        userContinues = false;
+    }
+
+
+} while (userContinues);
+
+
+//        System.out.print("Bob the Robot Teenager is lazy. Ask him a question or two, yell at him if you wish, or simply give him the silent treatment:");
+//        String str = input.nextLine();
+//        char lastLetter = str.charAt(str.length() - 1);
+//        switch (lastLetter) {
+//            case '?' :
+//                System.out.println("Sure.");
+//                break;
+//            case '!' :
+//                System.out.println("Whoa, chill out!");
+//                break;
+//            case ' ' :
+//                System.out.println("Fine. Be that way!");
+//                break;
+//            default:
+//                System.out.println("Whatever bro");
+//                break;
+//        }
     }
 }
 

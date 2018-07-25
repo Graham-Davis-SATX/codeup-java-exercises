@@ -4,32 +4,32 @@ public class Bob {
     public static void main(String[] args) {
 
         boolean userContinues = true;
-do {
 
-        System.out.println("Bob the Robot Teenager is lazy. Ask him a question or two, yell at him if you wish, or simply give him the silent treatment:");
-        Scanner input = new Scanner(System.in);
-        String msg = input.nextLine().trim();
-        String uppercaseVer = msg.toUpperCase();
+        do {
+            System.out.println("Bob the Robot Teenager is lazy. Ask him a question or two, yell at him if you wish, or simply give him the silent treatment:");
+            Scanner input = new Scanner(System.in);
+            String msg = input.nextLine().trim();
+            String uppercaseVer = msg.toUpperCase();
 
-        if(msg.endsWith("?")){
-            System.out.println("Sure.\n");
-        } else if (msg.endsWith("!") || (uppercaseVer.equals(msg) && !msg.isEmpty())) {
-            System.out.println("Whoa, chill out!\n");
-        } else if (msg.isEmpty()) {
-            System.out.println("Fine! Be that way!\n");
-        } else {
-            System.out.println("Whatever bro!\n");
-        }
+            if(msg.endsWith("?")){
+                System.out.println("Sure.\n");
+            } else if (msg.endsWith("!") || (uppercaseVer.equals(msg) && !msg.isEmpty())) {
+                System.out.println("Whoa, chill out!\n");
+            } else if (msg.isEmpty()) {
+                System.out.println("Fine! Be that way!\n");
+            } else {
+                System.out.println("Whatever bro!\n");
+            }
 
-    System.out.print("Would you like to keep talking to Bob (y/n)?\n");
-    String userResponse = input.next();
-    if (!userResponse.equalsIgnoreCase("y")) {
-        userContinues = false;
+            System.out.print("Would you like to keep talking to Bob (y/n)?\n");
+            String userResponse = input.next();
+            if (!userResponse.equalsIgnoreCase("y")) {
+                userContinues = false;
+            }
+
+        } while (userContinues);
     }
-
-
-} while (userContinues);
-
+}
 
 //        System.out.print("Bob the Robot Teenager is lazy. Ask him a question or two, yell at him if you wish, or simply give him the silent treatment:");
 //        String str = input.nextLine();
@@ -48,8 +48,7 @@ do {
 //                System.out.println("Whatever bro");
 //                break;
 //        }
-    }
-}
+
 
 /*
     Create a class named Bob with a main method for the following exercise.

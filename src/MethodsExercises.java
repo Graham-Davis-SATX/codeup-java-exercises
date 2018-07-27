@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.util.Random;
 public class MethodsExercises {
     public static void main(String[] args){
+
 //        double addition = addition(-4, 5);
 //        double subtraction = subtraction(5, 10);
 //        double multiplication = multiplication(3, 3);
@@ -17,18 +18,23 @@ public class MethodsExercises {
 //        System.out.println(userNumber);
 //        factorial();
 //        diceRoll();
-        guess();
-//       countVowels("AaBbEeIiOoUu");
+//        guess();
+//        countVowels("AaBbEeIiOoUu");
 //        countAs("aaaa");
 //        calculator();
-
     }
+
+
     public static int addition(int num1, int num2){
         return num1 + num2;
     }
+
+
     public static int subtraction(int num1, int num2){
         return num1 - num2;
     }
+
+
     public static double multiplication(double num1, double num2){
         double num = num2;
         for(int i = 0; i < num1 - 1; i++){
@@ -40,6 +46,8 @@ public class MethodsExercises {
         System.out.println(num2);
         return num2;
     }
+
+
     public static double multiply(double x, double y){
         if (x == 0 || y == 0) {
             return 0;
@@ -49,9 +57,13 @@ public class MethodsExercises {
         return -multiply(x, -y);
 
     }
+
+
     public static double division(double num1, double num2){
         return num1 / num2;
     }
+
+
     public static int getInteger(int min, int max){
         Scanner sc = new Scanner(System.in);
         boolean number = true;
@@ -64,6 +76,8 @@ public class MethodsExercises {
         }
         return 4;
     }
+
+
     public static void factorial(){
 
         boolean userCont = true;
@@ -96,6 +110,8 @@ public class MethodsExercises {
         }
 
     }
+
+
     public static void diceRoll(){
         boolean userCont = true;
         Scanner sc = new Scanner(System.in);
@@ -108,12 +124,13 @@ public class MethodsExercises {
             System.out.println("Roll 1: " + (roll1 + 1));
             System.out.println("Roll 2: " + (roll2 + 1));
             System.out.println("Do you want to roll again? 'Y' or 'N' " );
-            String userAnswer = sc.next();
-            if(userAnswer.equals("N")){
+            String userAnswer = sc.next().toLowerCase();
+            if(userAnswer.equals("n")){
                 userCont = false;
             }
         }
     }
+
 
     public static void guess(){
         Random rand = new Random();
@@ -121,13 +138,13 @@ public class MethodsExercises {
         Scanner sc = new Scanner(System.in);
         winNum = winNum + 1;
         boolean alive = true;
-        int x = 5;
+        int x = 10;
         int attempt = 1;
         System.out.println("I want to play a game!");
         System.out.println("I picked a number between 1-100");
         System.out.println("You have to guess my number.");
         System.out.println("If you get it wrong I will then tell you higher or lower");
-        System.out.println("You have 5 chances, enter something that isn\'t a number and you lose");
+        System.out.println("You have 10 chances, enter something that isn\'t a number and you lose");
         System.out.println("Live or die, make your choice.");
         while(alive){
             if(x == 0){
@@ -167,6 +184,7 @@ public class MethodsExercises {
         }
     }
 
+
     public static void countVowels(String input){
         int total = countAs(input, 'a');
         total += countAs(input, 'e');
@@ -187,6 +205,8 @@ public class MethodsExercises {
         }
         return counter;
     }
+
+
     public static void calculator(){
         Scanner sc = new Scanner(System.in);
         int num1, num2;

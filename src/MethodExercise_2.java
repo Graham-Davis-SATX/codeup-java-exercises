@@ -1,3 +1,4 @@
+/*
 import javax.swing.*;
 import java.io.*;
 import java.util.Random;
@@ -107,3 +108,4 @@ public class MethodsExercise_2 {
                 userCont = false;
             }
         }
+*/

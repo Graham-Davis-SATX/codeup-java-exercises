@@ -19,6 +19,7 @@ public class CodeBat {
 //        icyHot(120, -1); icyHot(-1, 120); icyHot(2, 120);
 //        in1020(12, 99); in1020(21, 12); in1020(8, 99);
 //        hasTeen(13, 20, 10); hasTeen(20, 19, 10); hasTeen(20, 10, 12);
+//        loneTeen(13, 99); loneTeen(21, 19); loneTeen(13, 13);
     } // end psvm
 
 
@@ -218,7 +219,7 @@ public class CodeBat {
     }
 
 
-    // Warm-up 'in1020'
+    // Warm-up 18 'in1020'
     /** Given 2 int values, return true if either of them is in the range 10..20 inclusive. */
     public static boolean in1020(int a, int b) {
         boolean tenToTwenty = ((a >= 10 && a <= 20) || (b >= 10 && b <= 20));
@@ -227,7 +228,7 @@ public class CodeBat {
     }
 
 
-    // Warm-up 'hasTeen'
+    // Warm-up 19 'hasTeen'
     /** We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 3 int values, return true if 1 or more of them are teen. */
     public static boolean hasTeen(int a, int b, int c) {
         boolean numIsATeen = ((a >= 13 && a <= 19) || (b >= 13 && b <= 19) || (c >= 13 && c <= 19));
@@ -235,6 +236,16 @@ public class CodeBat {
         return numIsATeen;
     }
 
+
+    // Warm-up 20 'loneTeen'
+    /** We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both. */
+    public static boolean loneTeen(int a, int b) {
+        boolean aTeen = (a >= 13 && a <= 19);
+        boolean bTeen = (b >= 13 && b <= 19);
+        boolean oneTeenAllowed = (aTeen && !bTeen) || (!aTeen && bTeen);
+        System.out.println("We've got two numbers but only one ~teen is allowed. Here are the numbers: " + a + " and " + b + ". Is there only one ~teen number? " + oneTeenAllowed);
+        return oneTeenAllowed;
+    }
 
 
 

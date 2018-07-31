@@ -1,17 +1,52 @@
-class Dish {
-    public double costInCents;
-    public String nameOfDish;
-    public boolean wouldRecommend;
+public class RestaurantDish {
+    private double costDollarsCents;
+    private String nameOfDish;
+    private boolean wouldRecommend;
 
-    public String eat() {
-        return String.format("%s costs $%s. Do other diners recommend this sandwich? %s\nNom Nom Nom!", nameOfDish, costInCents, wouldRecommend);
+
+    public RestaurantDish(double costDollarsCents, String nameOfDish, boolean wouldRecommend) {
+        this.costDollarsCents = costDollarsCents;
+        this.nameOfDish = nameOfDish;
+        this.wouldRecommend = wouldRecommend;
     }
 
-    public static void main(String[] args) {
-        Dish meal1 = new Dish();
-        meal1.costInCents = 5.15;
-        meal1.nameOfDish = "The Manwich";
-        meal1.wouldRecommend = true;
-        System.out.println(meal1.eat());
+    public double getCostDollarsCents() {
+        return costDollarsCents;
     }
+
+    public void setCostDollarsCents(double costDollarsCents) {
+        this.costDollarsCents = costDollarsCents;
+    }
+
+    public String getNameOfDish() {
+        return nameOfDish;
+    }
+
+    public void setNameOfDish(String nameOfDish) {
+        this.nameOfDish = nameOfDish;
+    }
+
+//    public boolean getWouldRecommend() {
+//        return wouldRecommend;
+//    }
+
+//    public void setWouldRecommend(boolean wouldRecommend) {
+//        this.wouldRecommend = wouldRecommend;
+//    }
+
+//
+//    class Person {
+//        public String name;
+//
+//        // the Person constructor
+//        public Person() {
+//            System.out.println("A Person is being created!");
+//        }
+//
+//        public static void main(String[] args) {
+//            Person p1 = new Person();
+//            Person p2 = new Person();
+//        }
+//    }
+
 }

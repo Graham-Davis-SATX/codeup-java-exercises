@@ -1,17 +1,24 @@
+import util.Input;
+
 public class PersonTest {
+
     public static void main(String[] args) {
 
         Input input = new Input();
 
-        input.getString();
-        input.getString("Give me something")
+        System.out.println(input.getString());
+        System.out.println(input.getString("GIVE ME SOMETHING!"));
+        System.out.println(input.yesNo());
+
 
         Person human = new Person();
-        human.setName("Graham");
+        human.setName("fer");
         human.sayHello();
 
         Person employee = new Person();
-        employee.setName("Walt");
+        employee.setName("Phillip");
         employee.sayHello();
+
     }
+
 }

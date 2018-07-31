@@ -2,22 +2,25 @@ package util;
 
 import java.util.Scanner;
 
-public class Bob {
-    public static void main(String[] args) {
-        System.out.println("Write something");
-        Scanner input = new Scanner(System.in);
-        String msg = input.nextLine().trim();
-        String uppercaseVer = msg.toUpperCase();
+public class Input {
 
-        if(msg.endsWith("?")){
-            System.out.println("Sure");
-        } else if (msg.endsWith("!") || (uppercaseVer.equals(msg) && !msg.isEmpty() ) ){
-            System.out.println("Whoa, chill out!");
-        } else if ( msg.isEmpty() ){
-            System.out.println("Fine. Be that way!");
-        } else {
-            System.out.println("Whatever");
-        }
+    private Scanner sc = new Scanner(System.in);
 
+    // Original version with params
+    public String getString(String prompt){
+        System.out.println(prompt);
+        return this.sc.nextLine().toLowerCase().trim();
     }
+
+    // Another version without params
+    public String getString(){
+        return this.getString("Type: ");
+    }
+
+    // YesNo reuses some code from getString
+    public boolean yesNo(){
+        String result = this.getString("Type yes or no (y/n)");
+        return (result.equals("y") || result.equals("yes"));
+    }
+
 }

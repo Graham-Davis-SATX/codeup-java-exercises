@@ -4,13 +4,13 @@ public class Movie {
     private String name;
     private String category;
 
-    public Movie(String name, String category) {
-        this.name = name;
-        this.category = category;
+    public Movie(String title, String cate) {
+        this.name = title;
+        this.category = cate;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -18,7 +18,7 @@ public class Movie {
     }
 
     public String getCategory() {
-        return category;
+        return this.category;
     }
 
     public void setCategory(String category) {

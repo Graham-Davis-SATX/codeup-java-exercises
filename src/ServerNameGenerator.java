@@ -9,7 +9,7 @@ public class ServerNameGenerator {
         String randomAdjective = (adjectives[new Random().nextInt(adjectives.length)]);
         String randomNouns = (nouns[new Random().nextInt(nouns.length)]);
 
-        System.out.println("Here is your server name:\n" + randomAdjective + "-" + randomNouns);
+        System.out.printf("Here is your server name:%n%s-%s", randomAdjective, randomNouns);
     }
 }
 

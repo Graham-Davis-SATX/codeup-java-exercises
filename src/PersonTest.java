@@ -7,7 +7,7 @@ public class PersonTest {
         Input input = new Input();
 
         System.out.println(input.getString());
-        System.out.println(input.getString("GIVE ME SOMETHING!"));
+//        System.out.println(input.getString("GIVE ME SOMETHING!"));
         System.out.println(input.yesNo());
 
 

@@ -1,18 +1,8 @@
-
 package util;
 
-
 public class InputTest {
-
-    public static void main(String[] args){
-
+    public static void main(String[] args) {
         Input input = new Input();
-
-        input.getString();
-        input.getInt(3, 5);
-        input.yesNo();
-
-
-
+        input.getDouble(1.25, 1.75);
     }
 }

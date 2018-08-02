@@ -1,6 +1,6 @@
 package movies;
 
-import util.Input;
+import util.Input2;
 
 public class MoviesApplication2 {
 
@@ -10,7 +10,7 @@ public class MoviesApplication2 {
 
     public static void main(String[] args) {
 
-        Input input = new Input();
+        Input2 input = new Input2();
         Movie[] movies = MoviesArray.findAll();
 
         while(true) {

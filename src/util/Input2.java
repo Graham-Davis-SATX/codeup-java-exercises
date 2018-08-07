@@ -4,54 +4,80 @@ import java.util.Scanner;
 
 public class Input2 {
 
-    private Scanner sc = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
-    // Original version with params
-    public String getString(String prompt){
+    public String getString() {
+        String userInput = scanner.next();
+        return userInput;
+    }
+
+    public String getString(String prompt) {
         System.out.println(prompt);
-        return this.sc.nextLine().toLowerCase().trim();
+        String userInput = scanner.nextLine();
+        return userInput;
     }
 
-    // Another version without params
-    public String getString(){
-        return this.getString("Type: ");
+    public boolean yesNo() {
+        System.out.println("Enter yes or y");
+        String firstLine = scanner.next();
+        return (firstLine.equalsIgnoreCase("yes") || firstLine.equalsIgnoreCase("y"));
     }
 
-    // YesNo reuses some code from getString
-    public boolean yesNo(){
-        String result = this.getString("Type yes or no (y/n)");
-        return (result.equals("y") || result.equals("yes"));
+    public boolean yesNo(String prompt) {
+        System.out.println(prompt);
+        String firstLine = scanner.next();
+        return (firstLine.equalsIgnoreCase("yes") || firstLine.equalsIgnoreCase("y"));
     }
 
     public int getInt(int min, int max){
+        int userInput = getInt("Enter a number between " + min + " and " + max);
+        if (userInput < min || userInput > max) {
+            return getInt(min, max);
+        } else return userInput;
+    }
 
-        int userInput = Integer.parseInt(this.getString("Give me a number between " + min + " and " + max));
-
-        if(userInput < min || userInput > max){
-            System.err.println("Number our of range");
-            getInt(min, max);
-        }
-
-        return userInput;
+    public int getInt(String prompt){
+        System.out.println(prompt);
+        return getInt();
     }
 
     public int getInt(){
-        return Integer.parseInt(this.getString("Give me a number"));
+        String userInput = scanner.next();
+        try{
+            return Integer.valueOf(userInput);
+        }catch (NumberFormatException e){
+            System.out.println("Error, must be an Integer");
+            return getInt();
+        }
     }
 
-    public double getDouble(double min, double max){
-        double userInput = Double.parseDouble(this.getString("Give me a decimal number between " + min + " and " + max));
-
-        if(userInput < min || userInput > max){
-            System.err.println("Decimal number out of range");
-            userInput = getDouble(min, max);
+    public double getDouble() {
+        System.out.println("Enter a double");
+        String userInput = scanner.next();
+        try{
+            return Double.valueOf(userInput);
+        }catch (NumberFormatException e){
+            System.out.println("Error, must be an Integer");
+            return getDouble();
         }
 
-        return userInput;
     }
 
-    public double getDouble(){
-        return Double.parseDouble(this.getString("Give me a decimal number"));
+    public double getDouble(double min, double max) {
+        System.out.println("Enter a number (double)");
+        double userInput = scanner.nextDouble();
+        if (userInput < min || userInput > max) {
+            return getDouble(min, max);
+        } else return userInput;
     }
+
+    public double getDouble(String prompt) {
+        System.out.println(prompt);
+        return getDouble();
+    }
+
+
+
+
 
 }
